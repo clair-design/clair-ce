@@ -1,4 +1,4 @@
-import { html } from 'hybrids'
+import { html, dispatch } from 'hybrids'
 
 const colorPresets = [
   'red',
@@ -15,8 +15,7 @@ const colorPresets = [
 ]
 
 function handleClick(host) {
-  const event = new CustomEvent('close')
-  host.dispatchEvent(event)
+  dispatch(host, 'close')
 }
 
 // capture mode
