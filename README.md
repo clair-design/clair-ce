@@ -1,2 +1,5 @@
 # clair-ce
-[experimental] clair components in web components
+
+**This is an experimental project!**
+
+clair components in web components.
