@@ -1,5 +1,4 @@
-import { html } from 'hybrids'
-import feather from 'feather-icons'
+import { html } from 'hybrids/esm'
 
 export default {
   type: '',
@@ -18,9 +17,6 @@ export default {
     const prefix = host.iconType !== '' ? `${host.iconType}-` : ''
     return ['c-icon', host.iconType, prefix + host.name]
   },
-  svgName(host) {
-    return host.isSvg ? `feather-${host.name}` : ''
-  },
   iconColor(host) {
     if (!host.color) {
       return host.isSvg ? 'currentColor' : 'inherit'
@@ -31,7 +27,6 @@ export default {
     const {
       ligature,
       isSvg,
-      svgName,
       name,
       iconType,
       classNames,
@@ -48,7 +43,7 @@ export default {
     }
 
     if (isSvg) {
-      const icon = feather.icons[name]
+      const icon = window.feather.icons[name]
       const origAttrs = icon.attrs
       icon.attrs = {
         ...icon.attrs,

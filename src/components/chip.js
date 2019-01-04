@@ -1,4 +1,4 @@
-import { html, dispatch } from 'hybrids'
+import { html, dispatch } from 'hybrids/esm'
 
 const colorPresets = [
   'red',
